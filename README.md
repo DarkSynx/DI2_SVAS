@@ -2,6 +2,7 @@
 Stop Audio Service Windows; Start Dead Islan 2.exe ; Wait 60s; Start Audio Service Windows; 
 Dev-C++ 
 
+![image](https://user-images.githubusercontent.com/9467611/236637781-afbfb05d-039c-42a5-a92e-9036cb1ca200.png)
 
 ```c++
 #include <iostream>
