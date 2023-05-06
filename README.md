@@ -1,4 +1,15 @@
 # DI2_SVAS
+
+BUG on DEAD ISLAND 2, audio service disabled and re-enabled;  this application does the work for you you can compile the project yourself with "Dev-C++ for Windows" https://sourceforge.net/projects/embarcadero-devcpp/ don't forget to create the "DI2_SVAS.ini" file containing line
+
+BUG sur DEAD ISLAND 2, du service audio à désactivé et réactivé; cette application fait le travail pour vous
+vous pouvez compiler le projet vous même avec "Dev-C++ for Windows" https://sourceforge.net/projects/embarcadero-devcpp/
+n'oubliez pas de créé le fichier "DI2_SVAS.ini" contenant la ligne : 
+```txt
+time = 70
+```
+pour 70 second
+
 Stop Audio Service Windows; Start Dead Islan 2.exe ; Wait 60s; Start Audio Service Windows; 
 Dev-C++ 
 
