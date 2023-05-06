@@ -1,0 +1,33 @@
+# Project: DI2_SVAS
+# Makefile created by Embarcadero Dev-C++ 6.3
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+RES      = DI2_SVAS_private.res
+OBJ      = main.o $(RES)
+LINKOBJ  = main.o $(RES)
+LIBS     = -L"E:/utilisateur/Desktop/DevC++Port/TDM-GCC-64/lib" -L"E:/utilisateur/Desktop/DevC++Port/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"E:/utilisateur/Desktop/DevC++Port/TDM-GCC-64/include" -I"E:/utilisateur/Desktop/DevC++Port/TDM-GCC-64/x86_64-w64-mingw32/include" -I"E:/utilisateur/Desktop/DevC++Port/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
+CXXINCS  = -I"E:/utilisateur/Desktop/DevC++Port/TDM-GCC-64/include" -I"E:/utilisateur/Desktop/DevC++Port/TDM-GCC-64/x86_64-w64-mingw32/include" -I"E:/utilisateur/Desktop/DevC++Port/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"E:/utilisateur/Desktop/DevC++Port/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
+BIN      = DI2_SVAS.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+DEL      = E:\utilisateur\Desktop\DevC++Port\devcpp.exe INTERNAL_DEL
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${DEL} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+DI2_SVAS_private.res: DI2_SVAS_private.rc 
+	$(WINDRES) -i DI2_SVAS_private.rc --input-format=rc -o DI2_SVAS_private.res -O coff 
+
